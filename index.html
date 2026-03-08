@@ -1,555 +1,439 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Student Portal – Chattahoochee Technical College</title>
-  <meta name="description"
-    content="Chattahoochee Technical College student portal home page with quick access to classes, registration, financial aid and student resources." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- ========== TOP NAV ========== -->
-  <header class="topnav">
-    <button class="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="logo-wrap">
-      <img src="assets/logo.png" alt="Chattahoochee Technical College logo" class="logo-img" />
-    </div>
-    <nav class="topnav-right">
-      <button class="icon-btn" aria-label="Calendar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-          stroke-width="1.8">
-          <rect x="3" y="4" width="18" height="18" rx="2" />
-          <line x1="16" y1="2" x2="16" y2="6" />
-          <line x1="8" y1="2" x2="8" y2="6" />
-          <line x1="3" y1="10" x2="21" y2="10" />
-        </svg></button>
-      <button class="icon-btn" aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-          stroke-width="1.8">
-          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
-          <path d="M13.73 21a2 2 0 0 1-3.46 0" />
-        </svg></button>
-      <div class="avatar">A</div>
-    </nav>
-  </header>
+  <div class="hero-wrapper">
+    <div class="hero-overlay"></div>
 
-  <!-- ========== HERO BANNER / CAROUSEL ========== -->
-  <section class="hero-banner" id="hero">
-    <div class="hero-bg" style="background-image:url('assets/hero_bg.png')"></div>
-    <div class="carousel-container">
-      <div class="carousel-track" id="carouselTrack">
+    <header class="topnav">
+      <div class="topnav-left">
+        <button class="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="logo-wrap">
+          <img src="assets/logo.png" alt="Chattahoochee Technical College logo" class="logo-img" />
+        </div>
+      </div>
+      <div class="topnav-right">
+        <button class="icon-btn" aria-label="Calendar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2" />
+            <line x1="16" y1="2" x2="16" y2="6" />
+            <line x1="8" y1="2" x2="8" y2="6" />
+            <line x1="3" y1="10" x2="21" y2="10" />
+            <path d="M9 16l2 2 4-4" />
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+            <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+          </svg>
+        </button>
+        <div class="avatar">A</div>
+      </div>
+    </header>
 
-        <article class="carousel-card active">
-          <p class="card-body">Are we still friends? Review the Quick Contact Info Tune Up card to make sure your info
-            is correct.</p>
-          <span class="card-counter">1 of 3</span>
-        </article>
+    <section class="hero-carousel">
+      <div class="carousel-container">
 
-        <article class="carousel-card">
-          <p class="card-body">Need help completing the FAFSA? Attend our workshop – Mar 10th @ North Metro Building
-            A-106 11AM-2PM</p>
-          <div class="card-footer-row">
-            <span class="card-counter">2 of 3</span>
-            <a href="#" class="card-link">Workshop Information HERE</a>
+        <article class="hero-card">
+          <p class="hero-card-text">Are we still friends? Review the Quick Contact Info Tune Up card to make sure your
+            info is correct.</p>
+          <div class="hero-card-footer">
+            <span class="hero-counter">1 of 3</span>
           </div>
         </article>
 
-        <article class="carousel-card">
-          <p class="card-body">Graduating this semester? Secure your spot to walk in the May ceremony!</p>
-          <div class="card-footer-row">
-            <span class="card-counter">3 of 3</span>
-            <a href="#" class="card-link">Register NOW for Graduation</a>
+        <article class="hero-card">
+          <p class="hero-card-text">Need help completing the FAFSA? Attend our workshop – Mar 10th @ North Metro
+            Building A-106 11AM-2PM</p>
+          <div class="hero-card-footer">
+            <span class="hero-counter">2 of 3</span>
+            <a href="#" class="hero-link">Workshop Information HERE</a>
+          </div>
+        </article>
+
+        <article class="hero-card">
+          <p class="hero-card-text">Graduating this semester? Secure your spot to walk in the May ceremony!</p>
+          <div class="hero-card-footer">
+            <span class="hero-counter">3 of 3</span>
+            <a href="#" class="hero-link">Register NOW for Graduation</a>
           </div>
         </article>
 
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
-  <!-- ========== TABS NAV ========== -->
-  <nav class="tabs-nav">
-    <div class="tabs-left">
-      <a href="#" class="tab active">Home</a>
-      <a href="#" class="tab">Academics</a>
-      <a href="#" class="tab">Community</a>
-      <a href="#" class="tab">My Account</a>
+  <nav class="tabs-nav-container">
+    <div class="tabs-nav">
+      <div class="tabs-left">
+        <a href="#" class="tab active">Home</a>
+        <a href="#" class="tab">Academics</a>
+        <a href="#" class="tab">Community</a>
+        <a href="#" class="tab">My Account</a>
+      </div>
+      <div class="tabs-right">
+        <a href="#" class="view-all-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          VIEW ALL CARDS
+        </a>
+      </div>
     </div>
-    <a href="#" class="view-all-link">
-      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16">
-        <circle cx="10" cy="10" r="8" />
-        <line x1="10" y1="6" x2="10" y2="14" />
-        <line x1="6" y1="10" x2="14" y2="10" />
-      </svg>
-      VIEW ALL CARDS
-    </a>
   </nav>
 
-  <!-- ========== MAIN CONTENT GRID ========== -->
   <main class="dashboard">
 
-    <!-- ROW 1 -->
     <div class="card-grid">
-
-      <!-- Quick Contact Info Tune Up -->
       <div class="card">
         <div class="card-header">
-          <span class="card-title">Quick Contact Info Tune Up</span>
-          <svg class="card-icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="11" width="18" height="11" rx="2" />
-            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-          </svg>
+          <h2 class="card-title">Quick Contact Info Tune Up</h2>
+          <div class="card-icons">
+            <span class="icon-lock"></span>
+          </div>
         </div>
-        <div class="card-body-text">
+        <div class="card-content">
           <p><strong>Have you peeked at your personal contact info lately?</strong></p>
+          <br>
           <p>If not, it's the perfect moment for a quick check-in!</p>
-          <ul>
-            <li><a href="#">Give it a look here</a>, and make sure everything is still up to date.</li>
-            <li>If your email or phone number needs a little refresh, <a href="#">just fill out the form</a>.</li>
+          <ul class="text-list">
+            <li>• <a href="#">Give it a look here</a>, and make sure everything is still up to date.</li>
+            <li>• If your email or phone number needs a little refresh, <a href="#">just fill out the form</a>.</li>
           </ul>
-          <p>Your future self (and your Inbox!) will thank you.</p>
+          <br>
+          <p>Your future self (and your inbox!) will thank you.</p>
         </div>
       </div>
 
-      <!-- Blackboard Classes -->
       <div class="card">
         <div class="card-header">
-          <span class="card-title">Blackboard Classes</span>
-          <div class="card-header-icons">
-            <button class="icon-btn-sm" aria-label="More">⋮</button>
-            <svg class="card-icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="11" width="18" height="11" rx="2" />
-              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-            </svg>
+          <div>
+            <h2 class="card-title">Blackboard Classes</h2>
+            <span class="card-subtitle">Last updated Mar 5, 2026 12:42 PM</span>
+          </div>
+          <div class="card-icons">
+            <span class="icon-dots"></span>
+            <span class="icon-lock"></span>
           </div>
         </div>
-        <p class="card-meta">Last updated Mar 5, 2026 12:42 PM</p>
-        <div class="semester-select">
-          <span>Spring Semester 2026</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#333"
-            stroke-width="2">
-            <path d="M6 9l6 6 6-6" />
-          </svg>
-          <button class="refresh-btn">↻</button>
-        </div>
-        <div class="course-list">
-          <div class="course-item">
-            <div>
-              <a href="#" class="course-link">ENGL 1101 Composition and Rhetoric</a>
-              <p class="course-dates">Jan 12, 2026 – Mar 7, 2026</p>
+        <div class="card-content">
+          <div class="semester-filter">
+            <span>Spring Semester 2026 ∨</span>
+            <span class="icon-refresh">↻</span>
+          </div>
+          <div class="class-list">
+            <div class="class-item">
+              <div class="class-info">
+                <a href="#">ENGL 1101 Composition and Rhetoric</a>
+                <span>Jan 12, 2026 - Mar 7, 2026</span>
+              </div>
+              <div class="grade-circle grade-b">B</div>
             </div>
-            <div class="grade-badge grade-b">B</div>
-          </div>
-          <div class="course-item">
-            <div>
-              <a href="#" class="course-link">ESCI 1020 Introduction to GIS</a>
-              <p class="course-dates">Jan 12, 2026 – Mar 7, 2026</p>
+            <div class="class-line"></div>
+            <div class="class-item">
+              <div class="class-info">
+                <a href="#">ESCI 1020 Introduction to GIS</a>
+                <span>Jan 12, 2026 - Mar 7, 2026</span>
+              </div>
+              <div class="grade-circle grade-none">-</div>
             </div>
-            <div class="grade-badge grade-dash">–</div>
-          </div>
-          <div class="course-item">
-            <div>
-              <a href="#" class="course-link">ESCI 1060 Survey of Environmental Law</a>
-              <p class="course-dates">Jan 12, 2026 – Mar 7, 2026</p>
+            <div class="class-line"></div>
+            <div class="class-item">
+              <div class="class-info">
+                <a href="#">ESCI 1060 Survey of Environmental Law</a>
+                <span>Jan 12, 2026 - Mar 7, 2026</span>
+              </div>
+              <div class="grade-circle grade-none">-</div>
             </div>
-            <div class="grade-badge grade-dash">–</div>
           </div>
         </div>
       </div>
 
-      <!-- Upcoming Dates -->
       <div class="card">
         <div class="card-header">
-          <span class="card-title">Upcoming Dates</span>
-          <div class="card-header-icons">
-            <svg class="card-icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="11" width="18" height="11" rx="2" />
-              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-            </svg>
+          <h2 class="card-title">Upcoming Dates</h2>
+          <div class="card-icons">
+            <span class="icon-lock"></span>
           </div>
         </div>
-        <img src="assets/registration_dates.png" alt="Registration Dates" class="card-banner-img" />
+        <div class="image-placeholder">
+          <img src="assets/registration_dates.png" alt="Registration Dates" class="card-banner-img" />
+        </div>
       </div>
 
-      <!-- Registration (NEW) -->
       <div class="card">
         <div class="card-header">
-          <span class="card-title">Registration (NEW)</span>
-          <svg class="card-icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="11" width="18" height="11" rx="2" />
-            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-          </svg>
+          <h2 class="card-title">Registration (NEW)</h2>
+          <div class="card-icons">
+            <span class="icon-lock"></span>
+          </div>
         </div>
-        <p class="card-of">1 of 1</p>
-        <p class="reg-semester"><strong>Spring Semester 2026</strong></p>
-        <p class="reg-dates">Open: Jan 26, 2026 – Apr 22, 2026</p>
-        <div class="registered-badge">REGISTERED: 4</div>
-        <button class="btn-primary">VIEW DETAILS</button>
-        <div class="carousel-dots">
-          <button class="dot-arrow">&#8249;</button>
-          <span class="dot active"></span>
-          <button class="dot-arrow">&#8250;</button>
+        <div class="card-content">
+          <span class="card-subtitle">1 of 1</span>
+          <h3 class="semester-title">Spring Semester 2026</h3>
+          <span class="semester-dates">Open: Jan 26, 2026 - Apr 22, 2026</span>
+          <div class="registered-tag">REGISTERED: 4</div>
+          <button class="btn-outline">VIEW DETAILS</button>
+          <div class="carousel-dots">
+            <span class="arrow">&lt;</span>
+            <span class="dot active"></span>
+            <span class="arrow">&gt;</span>
+          </div>
         </div>
       </div>
-
     </div>
 
-    <!-- ROW 2 -->
     <div class="card-grid">
-
-      <!-- Student Accounts -->
       <div class="card">
         <div class="card-header">
-          <span class="card-title">Student Accounts</span>
-          <svg class="card-icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="11" width="18" height="11" rx="2" />
-            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-          </svg>
+          <h2 class="card-title">Student Accounts</h2>
+          <div class="card-icons"><span class="icon-lock"></span></div>
         </div>
-        <ul class="link-list">
-          <li><svg class="li-icon" viewBox="0 0 24 24">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg><a href="#">Account Summary (View my Bill)</a></li>
-          <li><svg class="li-icon" viewBox="0 0 24 24">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg><a href="#">Pay My Bill</a></li>
-          <li><svg class="li-icon" viewBox="0 0 24 24">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg><a href="#">Ways to Pay</a></li>
-          <li><svg class="li-icon" viewBox="0 0 24 24">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg><a href="#">Nelnet Payment Plans</a></li>
-          <li><svg class="li-icon" viewBox="0 0 24 24">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg><a href="#">Statement/Payment History</a></li>
-          <li><svg class="li-icon" viewBox="0 0 24 24">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg><a href="#">Tax Notification (1098-T)</a></li>
-          <li><svg class="li-icon" viewBox="0 0 24 24">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg><a href="#">Refunds</a></li>
-        </ul>
+        <div class="card-content">
+          <ul class="link-list">
+            <li><span class="list-icon">🔗</span><a href="#">Account Summary (View my Bill)</a></li>
+            <li><span class="list-icon">🔗</span><a href="#">Pay My Bill</a></li>
+            <li><span class="list-icon icon-img">💳</span><a href="#">Ways to Pay</a></li>
+            <li><span class="list-icon">🔗</span><a href="#">Nelnet Payment Plans</a></li>
+            <li><span class="list-icon">🔗</span><a href="#">Statement/Payment History</a></li>
+            <li><span class="list-icon">🔗</span><a href="#">Tax Notification (1098-T)</a></li>
+            <li><span class="list-icon icon-img">💸</span><a href="#">Refunds</a></li>
+          </ul>
+        </div>
       </div>
 
-      <!-- Financial Aid -->
       <div class="card">
         <div class="card-header">
-          <span class="card-title">Financial Aid</span>
-          <svg class="card-icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="11" width="18" height="11" rx="2" />
-            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-          </svg>
+          <h2 class="card-title">Financial Aid</h2>
+          <div class="card-icons"><span class="icon-lock"></span></div>
         </div>
-        <ul class="link-list">
-          <li><svg class="li-icon" viewBox="0 0 24 24">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg><a href="#">Financial Aid Main Menu</a></li>
-          <li><svg class="li-icon" viewBox="0 0 24 24">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg><a href="#">My Financial Aid Award</a></li>
-          <li><svg class="li-icon" viewBox="0 0 24 24">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg><a href="#">My SAP Status</a></li>
-          <li><svg class="li-icon li-icon-shield" viewBox="0 0 24 24">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-            </svg><a href="#">Veteran Benefits</a></li>
-          <li><svg class="li-icon li-icon-shield" viewBox="0 0 24 24">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-            </svg><a href="#">Financial Aid Forms</a></li>
-        </ul>
+        <div class="card-content">
+          <ul class="link-list">
+            <li><span class="list-icon">🔗</span><a href="#">Financial Aid Main Menu</a></li>
+            <li><span class="list-icon">🔗</span><a href="#">My Financial Aid Award</a></li>
+            <li><span class="list-icon">🔗</span><a href="#">My SAP Status</a></li>
+            <li><span class="list-icon icon-img">🛡️</span><a href="#">Veteran Benefits</a></li>
+            <li><span class="list-icon icon-img">📝</span><a href="#">Financial Aid Forms</a></li>
+          </ul>
+        </div>
       </div>
 
-      <!-- Emergency Notification Alerts -->
       <div class="card">
         <div class="card-header">
-          <span class="card-title">Emergency Notification Alerts</span>
-          <div class="card-header-icons">
-            <button class="icon-btn-sm" aria-label="More">⋮</button>
-            <svg class="card-icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
-            </svg>
+          <h2 class="card-title">Emergency Notification Alerts</h2>
+          <div class="card-icons">
+            <span class="icon-dots"></span>
+            <span class="icon-bookmark"></span>
           </div>
         </div>
-        <img src="assets/eagle_alert.png" alt="Eagle Alert" class="card-banner-img" />
+        <div class="image-placeholder">
+          <img src="assets/eagle_alert.png" alt="Eagle Alert" class="card-banner-img" />
+        </div>
       </div>
 
-      <!-- DegreeWorks -->
-      <div class="card">
+      <div class="card text-center">
         <div class="card-header">
-          <span class="card-title">DegreeWorks Current Term Major...</span>
-          <div class="card-header-icons">
-            <svg class="card-icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
-            </svg>
+          <h2 class="card-title">DegreeWorks Current Term Major...</h2>
+          <div class="card-icons">
+            <span class="icon-dots"></span>
+            <span class="icon-bookmark"></span>
           </div>
         </div>
-        <p class="degree-program">Associate Of Applied Science</p>
-        <div class="degree-circle-wrap">
-          <div class="degree-circle">
-            <svg viewBox="0 0 36 36" class="circular-chart">
-              <path class="circle-bg"
-                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-              <path class="circle" stroke-dasharray="63, 100"
-                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-            </svg>
-            <span class="percentage">63%</span>
+        <div class="card-content align-center">
+          <p class="degree-title">Associate Of Applied Science</p>
+          <div class="progress-circle">
+            <span class="progress-text">63%</span>
           </div>
+          <p class="progress-label">REQUIREMENTS</p>
+          <div class="gpa-score">2.38</div>
+          <p class="progress-label">OVERALL GPA</p>
+          <a href="#" class="view-audit">View audit</a>
         </div>
-        <p class="degree-label">REQUIREMENTS</p>
-        <p class="gpa-score">2.38</p>
-        <p class="gpa-label">OVERALL GPA</p>
-        <a href="#" class="card-link" style="display:block;text-align:center">View audit</a>
       </div>
-
     </div>
 
-    <!-- ROW 3 -->
     <div class="card-grid">
-
-      <!-- Eagle Link -->
       <div class="card">
         <div class="card-header">
-          <span class="card-title">Eagle Link</span>
-          <div class="card-header-icons">
-            <button class="icon-btn-sm">⋮</button>
-            <svg class="card-icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
-            </svg>
+          <h2 class="card-title">Eagle Link</h2>
+          <div class="card-icons">
+            <span class="icon-dots"></span>
+            <span class="icon-bookmark"></span>
           </div>
         </div>
-        <img src="assets/eagle_link.png" alt="Eagle Link" class="eagle-link-img" />
-        <h3 class="signin-title">Sign in</h3>
-        <p class="signin-sub">Welcome to EAGLE Link!</p>
-        <p class="signin-desc">Please use your Chatt Tech username and password to sign in.</p>
-        <button class="btn-dark">Click here to sign in!</button>
+        <div class="image-placeholder small-placeholder">
+          <img src="assets/eagle_link.png" alt="Eagle Link Logo" class="eagle-link-img" />
+        </div>
+        <div class="card-content align-center">
+          <h3 class="signin-title">Sign in</h3>
+          <p class="signin-desc"><strong>Welcome to EAGLE Link!</strong><br>Please use your Chatt Tech username and
+            password to sign in.</p>
+          <button class="btn-solid">Click here to sign in!</button>
+        </div>
       </div>
 
-      <!-- Student Guidebook -->
       <div class="card">
         <div class="card-header">
-          <span class="card-title">Student Guidebook</span>
-          <div class="card-header-icons">
-            <button class="icon-btn-sm">⋮</button>
-            <svg class="card-icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
-            </svg>
+          <h2 class="card-title">Student Guidebook</h2>
+          <div class="card-icons">
+            <span class="icon-dots"></span>
+            <span class="icon-bookmark"></span>
           </div>
         </div>
-        <img src="assets/student_guidebook.png" alt="Student Guidebook" class="card-banner-img" />
+        <div class="image-placeholder full-height">
+          <img src="assets/student_guidebook.png" alt="Student Guidebook" class="card-banner-img" />
+        </div>
       </div>
 
-      <!-- Academic Advisement -->
+      <div class="card text-center">
+        <div class="card-header">
+          <h2 class="card-title">Academic Advisement</h2>
+          <div class="card-icons">
+            <span class="icon-dots"></span>
+            <span class="icon-bookmark"></span>
+          </div>
+        </div>
+        <div class="card-content align-center">
+          <p class="advise-text">Contact your academic advisor to learn more about program requirements and specific
+            admission criteria (if applicable).</p>
+          <a href="#" class="advise-main-link">Find My Advisor</a>
+          <a href="#" class="advise-sub-link">Advisement for Dual Enrollment</a>
+          <a href="#" class="advise-sub-link">Advisement for Chatt Tech College Academy</a>
+          <p class="advise-footer-links"><a href="#">College Catalog</a> | <a href="#">Course Descriptions</a></p>
+        </div>
+      </div>
+
       <div class="card">
         <div class="card-header">
-          <span class="card-title">Academic Advisement</span>
-          <div class="card-header-icons">
-            <button class="icon-btn-sm">⋮</button>
-            <svg class="card-icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
-            </svg>
+          <h2 class="card-title">Student Access</h2>
+          <div class="card-icons">
+            <span class="icon-dots"></span>
+            <span class="icon-bookmark"></span>
           </div>
         </div>
-        <p class="advisement-text">Contact your academic advisor to learn more about program requirements and specific
-          admission criteria (if applicable).</p>
-        <a href="#" class="advisement-big-link">Find My Advisor</a>
-        <ul class="advisement-links">
-          <li><a href="#">Advisement for Dual Enrollment</a></li>
-          <li><a href="#">Advisement for Chatt Tech College Academy</a></li>
-          <li><a href="#">College Catalog</a> | <a href="#">Course Descriptions</a></li>
-        </ul>
-      </div>
-
-      <!-- Student Access -->
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">Student Access</span>
-          <div class="card-header-icons">
-            <button class="icon-btn-sm">⋮</button>
-            <svg class="card-icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
-            </svg>
-          </div>
+        <div class="card-content">
+          <ul class="link-list">
+            <li><span class="app-icon bb">A</span><a href="#">Blackboard</a></li>
+            <li><span class="app-icon mail">✉</span><a href="#">Student Email</a></li>
+            <li><span class="app-icon okta">O</span><a href="#">Okta Dashboard</a></li>
+            <li><span class="list-icon">🔗</span><a href="#">DegreeWorks</a></li>
+            <li><span class="app-icon ctc">C</span><a href="#">Help Desk</a></li>
+            <li><span class="app-icon ctc">C</span><a href="#">Chatt Tech Homepage</a></li>
+          </ul>
         </div>
-        <ul class="link-list">
-          <li><span class="link-icon app-icon bb">B</span><a href="#">Blackboard</a></li>
-          <li><span class="link-icon app-icon mail">✉</span><a href="#">Student Email</a></li>
-          <li><span class="link-icon app-icon okta">O</span><a href="#">Okta Dashboard</a></li>
-          <li><span class="link-icon app-icon dw">D</span><a href="#">DegreeWorks</a></li>
-          <li><span class="link-icon app-icon hd">?</span><a href="#">Help Desk</a></li>
-          <li><span class="link-icon app-icon ctc">C</span><a href="#">Chatt Tech Homepage</a></li>
-        </ul>
       </div>
-
     </div>
 
-    <!-- ROW 4 -->
     <div class="card-grid">
-
-      <!-- Academic Calendar -->
       <div class="card">
         <div class="card-header">
-          <span class="card-title">Academic Calendar</span>
-          <div class="card-header-icons">
-            <button class="icon-btn-sm">⋮</button>
-            <svg class="card-icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
-            </svg>
-          </div>
+          <h2 class="card-title">Academic Calendar</h2>
+          <div class="card-icons"><span class="icon-dots"></span><span class="icon-bookmark"></span></div>
         </div>
-        <img src="assets/academic_calendar.png" alt="Academic Calendar" class="card-banner-img" />
+        <div class="image-placeholder full-height"><img src="assets/academic_calendar.png" alt="Calendar"
+            class="card-banner-img" /></div>
       </div>
-
-      <!-- Student Help Desk -->
       <div class="card">
         <div class="card-header">
-          <span class="card-title">Student Help Desk</span>
-          <div class="card-header-icons">
-            <button class="icon-btn-sm">⋮</button>
-            <svg class="card-icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
-            </svg>
-          </div>
+          <h2 class="card-title">Student Help Desk</h2>
+          <div class="card-icons"><span class="icon-dots"></span><span class="icon-bookmark"></span></div>
         </div>
-        <img src="assets/student_help_desk.png" alt="Having Tech Issues? Student Help Desk" class="card-banner-img" />
+        <div class="image-placeholder full-height"><img src="assets/student_help_desk.png" alt="Help Desk"
+            class="card-banner-img" /></div>
       </div>
-
-      <!-- Connect With Us – Facebook -->
       <div class="card">
         <div class="card-header">
-          <span class="card-title">Connect With Us – Facebook</span>
-          <div class="card-header-icons">
-            <button class="icon-btn-sm">⋮</button>
-            <svg class="card-icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
-            </svg>
-          </div>
+          <h2 class="card-title">Connect With Us - Facebook</h2>
+          <div class="card-icons"><span class="icon-dots"></span><span class="icon-bookmark"></span></div>
         </div>
-        <img src="assets/connect_facebook.png" alt="Connect With Us on Facebook" class="card-banner-img" />
+        <div class="image-placeholder full-height"><img src="assets/connect_facebook.png" alt="Facebook"
+            class="card-banner-img" /></div>
       </div>
-
-      <!-- Academic Support -->
       <div class="card">
         <div class="card-header">
-          <span class="card-title">Academic Support</span>
-          <div class="card-header-icons">
-            <button class="icon-btn-sm">⋮</button>
-            <svg class="card-icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
-            </svg>
-          </div>
+          <h2 class="card-title">Academic Support</h2>
+          <div class="card-icons"><span class="icon-dots"></span><span class="icon-bookmark"></span></div>
         </div>
-        <ul class="link-list">
-          <li><span class="link-icon app-icon lib" style="font-size:11px">📚</span><a href="#">Library</a></li>
-          <li><svg class="li-icon" viewBox="0 0 24 24">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg><a href="#">Library Guides</a></li>
-          <li><span class="link-icon app-icon ans">A</span><a href="#">Library Answers</a></li>
-          <li><span class="link-icon app-icon tut">T</span><a href="#">Online Tutoring</a></li>
-          <li><span class="link-icon app-icon sc">S</span><a href="#">Success Center</a></li>
-          <li><span class="link-icon app-icon ans">A</span><a href="#">Success Center Answers</a></li>
-          <li><span class="link-icon app-icon ta">T</span><a href="#">Technology Answers</a></li>
-        </ul>
+        <div class="card-content">
+          <ul class="link-list">
+            <li><span class="app-icon lib">📚</span><a href="#">Library</a></li>
+            <li><span class="list-icon">🔗</span><a href="#">Library Guides</a></li>
+            <li><span class="app-icon ans">?</span><a href="#">Library Answers</a></li>
+            <li><span class="app-icon ctc">C</span><a href="#">Online Tutoring</a></li>
+            <li><span class="app-icon ctc">C</span><a href="#">Success Center</a></li>
+            <li><span class="app-icon ans">?</span><a href="#">Success Center Answers</a></li>
+            <li><span class="app-icon ans">?</span><a href="#">Technology Answers</a></li>
+          </ul>
+        </div>
       </div>
-
     </div>
 
-    <!-- ROW 5 -->
-    <div class="card-grid row5">
-
-      <!-- Current Student Forms -->
+    <div class="card-grid row3">
+      <div class="card scrollable">
+        <div class="card-header">
+          <h2 class="card-title">Current Student Forms</h2>
+          <div class="card-icons"><span class="icon-dots"></span><span class="icon-bookmark"></span></div>
+        </div>
+        <div class="card-content">
+          <ul class="link-list">
+            <li><span class="app-icon ctc">C</span><a href="#">Program Change Request</a></li>
+            <li><span class="app-icon ctc">C</span><a href="#">Order Official Transcript</a></li>
+            <li><span class="list-icon">🔗</span><a href="#">View Final Grades</a></li>
+            <li><span class="app-icon ctc">C</span><a href="#">Petition for Graduation</a></li>
+            <li><span class="list-icon">🔗</span><a href="#">View Unofficial Transcript</a></li>
+            <li><span class="app-icon green">F</span><a href="#">FERPA Request Form</a></li>
+            <li><span class="app-icon green">T</span><a href="#">Transcript Re-Evaluation Request</a></li>
+            <li><span class="list-icon">🔗</span><a href="#">Update or Set Emergency Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="card scrollable">
+        <div class="card-header">
+          <h2 class="card-title">Student Resources</h2>
+          <div class="card-icons"><span class="icon-dots"></span><span class="icon-bookmark"></span></div>
+        </div>
+        <div class="card-content">
+          <ul class="link-list">
+            <li><span class="app-icon ctc">C</span><a href="#">Counseling Services</a></li>
+            <li><span class="app-icon ctc">C</span><a href="#">Disability Support Services</a></li>
+            <li><span class="app-icon solid-blue"></span><a href="#">DSS Accommodate</a></li>
+            <li><span class="app-icon ctc">C</span><a href="#">DSS Testing Request</a></li>
+            <li><span class="app-icon ctc">C</span><a href="#">Golden Eagle Food Pantry</a></li>
+            <li><span class="app-icon ctc">C</span><a href="#">Office of Career Development</a></li>
+            <li><span class="app-icon ctc">C</span><a href="#">Office of Student Involvement</a></li>
+            <li><span class="app-icon ctc">C</span><a href="#">Veteran Services</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="card">
         <div class="card-header">
-          <span class="card-title">Current Student Forms</span>
-          <div class="card-header-icons">
-            <button class="icon-btn-sm">⋮</button>
-            <svg class="card-icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
-            </svg>
-          </div>
+          <h2 class="card-title">To-Do List</h2>
+          <div class="card-icons"><span class="icon-dots"></span><span class="icon-bookmark"></span></div>
         </div>
-        <ul class="link-list">
-          <li><span class="link-icon app-icon form">F</span><a href="#">Program Change Request</a></li>
-          <li><span class="link-icon app-icon form">F</span><a href="#">Order Official Transcript</a></li>
-          <li><svg class="li-icon" viewBox="0 0 24 24">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg><a href="#">View Final Grades</a></li>
-          <li><span class="link-icon app-icon form">F</span><a href="#">Petition for Graduation</a></li>
-          <li><svg class="li-icon" viewBox="0 0 24 24">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-            </svg><a href="#">View Unofficial Transcript</a></li>
-          <li><span class="link-icon app-icon green">G</span><a href="#">FERPA Request Form</a></li>
-          <li><span class="link-icon app-icon green">G</span><a href="#">Transcript Re-Evaluation Request</a></li>
-          <li><span class="link-icon app-icon form">F</span><a href="#">Update or Set Emergency Contact</a></li>
-        </ul>
+        <div class="card-content align-center to-do-content">
+          <div class="todo-icon">✓</div>
+          <p class="todo-title">Add your tasks</p>
+          <p class="todo-sub">Create personal tasks and reminders.</p>
+          <button class="btn-outline">ADD NEW TASK</button>
+        </div>
       </div>
-
-      <!-- Student Resources -->
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">Student Resources</span>
-          <div class="card-header-icons">
-            <button class="icon-btn-sm">⋮</button>
-            <svg class="card-icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
-            </svg>
-          </div>
-        </div>
-        <ul class="link-list">
-          <li><span class="link-icon app-icon form">F</span><a href="#">Counseling Services</a></li>
-          <li><span class="link-icon app-icon form">F</span><a href="#">Disability Support Services</a></li>
-          <li><span class="link-icon app-icon form">F</span><a href="#">DSS Accommodate</a></li>
-          <li><span class="link-icon app-icon form">F</span><a href="#">DSS Testing Request</a></li>
-          <li><span class="link-icon app-icon form">F</span><a href="#">Golden Eagle Food Pantry</a></li>
-          <li><span class="link-icon app-icon form">F</span><a href="#">Office of Career Development</a></li>
-          <li><span class="link-icon app-icon form">F</span><a href="#">Office of Student Involvement</a></li>
-          <li><span class="link-icon app-icon form">F</span><a href="#">Veteran Services</a></li>
-        </ul>
-      </div>
-
-      <!-- To-Do List -->
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">To-Do List</span>
-          <div class="card-header-icons">
-            <button class="icon-btn-sm">⋮</button>
-            <svg class="card-icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
-            </svg>
-          </div>
-        </div>
-        <div class="todo-empty">
-          <svg class="todo-check" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2.5">
-            <polyline points="20 6 9 17 4 12" />
-          </svg>
-          <p class="todo-empty-title">Add your tasks</p>
-          <p class="todo-empty-sub">Create personal tasks and reminders.</p>
-        </div>
-        <button class="btn-outline">ADD NEW TASK</button>
-      </div>
-
     </div>
 
   </main>
-
-  <!-- Scroll to top -->
-  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">&#8679;</button>
 
   <script src="script.js"></script>
 </body>

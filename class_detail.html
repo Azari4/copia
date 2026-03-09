@@ -250,36 +250,27 @@
         }
 
         .grade-widget {
-            position: relative;
             width: 80px;
             height: 80px;
             border-radius: 50%;
-            border: 4px solid #eee;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 30px;
-        }
-
-        /* Simple CSS trick for the partial green border ring */
-        .grade-widget::before {
-            content: '';
-            position: absolute;
-            top: -4px;
-            right: -4px;
-            bottom: -4px;
-            left: -4px;
-            border-radius: 50%;
-            border: 4px solid transparent;
-            border-right-color: var(--success-green);
-            border-bottom-color: var(--success-green);
-            transform: rotate(-15deg);
+            /* El truco del borde verde para simular 85% de progreso */
+            border: 6px solid #eee;
+            border-top-color: #35c59f;
+            border-right-color: #35c59f;
+            border-bottom-color: #35c59f;
+            transform: rotate(45deg);
         }
 
         .grade-letter-big {
             font-size: 32px;
             font-weight: 700;
-            color: #333;
+            color: #555;
+            transform: rotate(-45deg);
+            /* Deshacer rotación para que la B quede derecha */
         }
 
         .grades-summary-block {

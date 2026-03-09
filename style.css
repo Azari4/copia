@@ -6,21 +6,30 @@
 }
 
 :root {
-  --bg-color: #f4f5f7;
+  --bg-color: #f0f2f5;
+  /* Gris clarito de fondo de pantalla */
   --card-bg: #ffffff;
   --text-main: #202124;
+  /* Gris oscuro casi negro */
   --text-muted: #5f6368;
-  --link-color: #0b5c9e;
+  /* Gris secundario */
+  --link-color: #0056b3;
+  /* Azul oficial de los links */
   --border-color: #dadce0;
-  --gold: #d4a017;
-  --header-bg: rgba(0, 0, 0, 0.4);
+  --gold: #c29b20;
+  /* Mostaza exacto del banner */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 body {
-  font-family: 'Open Sans', -apple-system, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-main);
   line-height: 1.5;
+  font-size: 13px;
+  /* Tamaño base estándar de los textos internos */
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -32,25 +41,24 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ===== HEADER & HERO (Integrado) ===== */
+/* ===== HEADER & HERO ===== */
 .hero-wrapper {
   position: relative;
-  background-color: #333;
-  /* Color de fallback */
+  background-color: #222;
   background-image: url('assets/hero_bg.png');
   background-size: cover;
-  background-position: center;
-  padding-bottom: 24px;
+  background-position: center top;
 }
 
 .hero-overlay {
   position: absolute;
-  top: 52px;
-  /* Start below the topnav */
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.45);
+  /* Oscurece la foto para resaltar letras */
+  z-index: 1;
 }
 
 .topnav {
@@ -59,10 +67,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 6px 24px;
-  background: #003087;
-  /* Solid blue topnav */
-  height: 52px;
+  padding: 12px 24px;
 }
 
 .topnav-left,
@@ -83,13 +88,13 @@ a:hover {
 
 .hamburger span {
   display: block;
-  width: 20px;
+  width: 22px;
   height: 2px;
   background: #fff;
 }
 
 .logo-img {
-  max-height: 40px;
+  max-height: 38px;
   width: auto;
   object-fit: contain;
 }
@@ -101,6 +106,11 @@ a:hover {
   cursor: pointer;
   display: flex;
   align-items: center;
+}
+
+.icon-btn svg {
+  width: 20px;
+  height: 20px;
 }
 
 .avatar {
@@ -116,66 +126,81 @@ a:hover {
   font-size: 14px;
 }
 
-/* ===== CAROUSEL CARDS ===== */
+/* ===== CAROUSEL CARDS (Superiores) ===== */
 .hero-carousel {
   position: relative;
   z-index: 10;
-  max-width: 1280px;
+  max-width: 1500px;
+  /* Ancho mayor como en la captura */
   margin: 0 auto;
-  padding: 20px 24px 0;
-  /* Float cards overlapping hero bottom */
-  transform: translateY(30px);
+  padding: 40px 24px 24px;
+  /* Las deja sentadas abajo */
 }
 
 .carousel-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 20px;
 }
 
 .hero-card {
   background: #fff;
-  border-radius: 6px;
-  padding: 16px;
+  border-radius: 4px;
+  border-top: 8px solid var(--gold);
+  /* Grueso exacto */
+  padding: 16px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 120px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  min-height: 125px;
+  box-shadow: var(--shadow-md);
 }
 
 .hero-card-text {
-  font-size: 14px;
-  color: var(--text-muted);
+  font-size: 13.5px;
+  color: #333;
+  /* Gris fuerte */
+  line-height: 1.4;
 }
 
 .hero-card-footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: 12px;
+  margin-top: 14px;
 }
 
 .hero-counter {
-  font-size: 12px;
-  color: #999;
+  font-size: 11px;
+  color: #888;
 }
 
 .hero-link {
-  font-size: 13px;
+  font-size: 12.5px;
   text-decoration: underline;
+}
+
+/* Botón 3er tarjeta (Register NOW) */
+.btn-link {
+  border: 1px solid var(--link-color);
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-decoration: none !important;
+  font-weight: 500;
+}
+
+.btn-link:hover {
+  background: #f0f4f8;
 }
 
 /* ===== TABS NAV ===== */
 .tabs-nav-container {
   background: #fff;
-  border-bottom: 2px solid var(--border-color);
-  padding-top: 30px;
-  /* Space for intersecting hero cards */
+  border-bottom: 1px solid var(--border-color);
 }
 
 .tabs-nav {
-  max-width: 1280px;
+  max-width: 1500px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -196,8 +221,8 @@ a:hover {
 }
 
 .tab:hover {
-  text-decoration: none;
   color: var(--link-color);
+  text-decoration: none;
 }
 
 .tab.active {
@@ -217,18 +242,18 @@ a:hover {
 
 /* ===== DASHBOARD MAIN GRID ===== */
 .dashboard {
-  max-width: 1280px;
+  max-width: 1500px;
   margin: 24px auto;
-  padding: 0 16px;
+  padding: 0 24px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 
 .card-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  gap: 20px;
   align-items: stretch;
 }
 
@@ -239,13 +264,15 @@ a:hover {
 /* ===== TARJETAS (CARDS) ===== */
 .card {
   background: var(--card-bg);
-  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  /* Borde sutil gris en lugar de sombra pesada */
+  border-radius: 6px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-  /* Softer original shadow */
+  box-shadow: var(--shadow-sm);
   overflow: hidden;
-  height: 100%;
+  height: 255px;
+  /* Altura estricta para alinear todo a la altura del 3er item */
 }
 
 .card-header {
@@ -269,34 +296,59 @@ a:hover {
   margin-top: 4px;
 }
 
+.card-subtitle-gray {
+  font-size: 11px;
+  color: #888;
+  display: block;
+  margin-bottom: 8px;
+}
+
 .card-icons {
   display: flex;
   gap: 8px;
-  color: #999;
+  color: #aaa;
 }
 
-/* Iconos simulados por CSS para estructurar */
-.icon-dots::before {
-  content: '⋮';
-  font-weight: bold;
-  font-size: 18px;
+.icon-dots,
+.icon-lock,
+.icon-bookmark {
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.icon-dots {
+  width: 14px;
+  height: 14px;
+  margin-top: 2px;
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="5" r="2.5"/><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="19" r="2.5"/></svg>');
+  mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="5" r="2.5"/><circle cx="12" cy="12" r="2.5"/><circle cx="12" cy="19" r="2.5"/></svg>');
   cursor: pointer;
 }
 
-.icon-lock::before {
-  content: '🔒';
-  font-size: 14px;
+.icon-lock {
+  width: 13px;
+  height: 13px;
+  margin-top: 2px;
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>');
+  mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>');
 }
 
-.icon-bookmark::before {
-  content: '🔖';
-  font-size: 14px;
+.icon-bookmark {
+  width: 14px;
+  height: 14px;
+  margin-top: 2px;
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>');
+  mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>');
 }
 
 .card-content {
   padding: 0 16px 16px;
-  font-size: 13px;
-  color: var(--text-main);
   flex-grow: 1;
 }
 
@@ -310,15 +362,24 @@ a:hover {
   align-items: center;
 }
 
-/* Placeholder de imagenes para que mantengan la estructura */
-.image-placeholder {
-  background-color: transparent;
+.bold-text {
+  font-weight: 600;
+}
+
+.mt-12 {
+  margin-top: 12px;
+}
+
+.w-100 {
   width: 100%;
-  padding: 0;
+}
+
+/* Contenedores de imagen */
+.image-placeholder {
+  width: 100%;
   display: flex;
   align-items: stretch;
   justify-content: center;
-  border: none;
   flex: 1;
 }
 
@@ -331,15 +392,14 @@ a:hover {
 
 .eagle-link-img {
   width: auto;
-  height: 52px;
+  height: 50px;
   margin: 10px auto;
   object-fit: contain;
   display: block;
 }
 
 .image-placeholder.small-placeholder {
-  min-height: auto;
-  margin-bottom: 0px;
+  flex: none;
 }
 
 .image-placeholder.full-height {
@@ -352,7 +412,7 @@ a:hover {
 .text-list {
   list-style: none;
   padding-left: 8px;
-  margin-top: 4px;
+  margin-top: 12px;
 }
 
 /* Clases (Blackboard) */
@@ -360,10 +420,11 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 13px;
+  font-size: 13.5px;
   margin-bottom: 16px;
   border-bottom: 1px solid #eee;
-  padding-bottom: 8px;
+  padding-bottom: 10px;
+  font-weight: 500;
 }
 
 .class-item {
@@ -385,6 +446,7 @@ a:hover {
 .class-info span {
   font-size: 11px;
   color: #888;
+  margin-top: 2px;
 }
 
 .class-line {
@@ -394,21 +456,22 @@ a:hover {
 }
 
 .grade-circle {
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .grade-b {
-  border: 2px solid #2ecc71;
-  color: #2ecc71;
+  border: 2px solid #10b981;
+  color: #10b981;
 }
 
+/* Verde esmeralda */
 .grade-none {
   border: 2px solid #ccc;
   color: #ccc;
@@ -416,37 +479,38 @@ a:hover {
 
 /* Registros */
 .semester-title {
-  font-size: 14px;
+  font-size: 14.5px;
   font-weight: 700;
-  margin-top: 8px;
 }
 
 .semester-dates {
-  font-size: 12px;
-  color: #666;
+  font-size: 11.5px;
+  color: #555;
   display: block;
   margin-bottom: 12px;
+  margin-top: 2px;
 }
 
 .registered-tag {
   display: inline-block;
-  border: 1px solid #8ab4f8;
-  color: #1967d2;
+  border: 1px solid #93c5fd;
+  color: #2563eb;
   padding: 2px 8px;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
   border-radius: 4px;
-  margin-bottom: 16px;
+  text-transform: uppercase;
 }
 
 .carousel-dots {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
+  justify-content: space-between;
+  width: 100%;
   margin-top: 16px;
   color: #aaa;
-  font-size: 12px;
+  font-size: 14px;
+  padding: 0 4px;
 }
 
 .dot {
@@ -460,12 +524,12 @@ a:hover {
   background: var(--link-color);
 }
 
-/* Listas con links e iconos (Student Accounts, Resources, etc) */
+/* Listas con links e iconos */
 .link-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .link-list li {
@@ -477,13 +541,35 @@ a:hover {
 
 .list-icon {
   color: #888;
-  font-size: 12px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+}
+
+.svg-icon {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.app-svg {
+  width: 11px;
+  height: 11px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .app-icon {
   width: 16px;
   height: 16px;
-  font-size: 10px;
+  font-size: 9px;
   color: #fff;
   display: flex;
   align-items: center;
@@ -526,18 +612,19 @@ a:hover {
 
 /* Botones */
 .btn-outline {
-  width: 100%;
   padding: 8px;
   background: transparent;
   border: 1px solid var(--link-color);
   color: var(--link-color);
-  font-weight: 700;
+  font-weight: 600;
   border-radius: 4px;
   cursor: pointer;
+  text-transform: uppercase;
+  font-size: 12px;
 }
 
 .btn-outline:hover {
-  background: #f4f8fe;
+  background: #f0f4f8;
 }
 
 .btn-solid {
@@ -550,6 +637,7 @@ a:hover {
   font-weight: 600;
   cursor: pointer;
   margin-top: 16px;
+  font-size: 13px;
 }
 
 .btn-solid:hover {
@@ -559,16 +647,15 @@ a:hover {
 /* DegreeWorks */
 .degree-title {
   font-size: 13px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .progress-circle {
-  width: 80px;
-  height: 80px;
+  width: 72px;
+  height: 72px;
   border: 4px solid var(--gold);
   border-radius: 50%;
   border-left-color: #eee;
-  /* Simula 63% */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -579,7 +666,7 @@ a:hover {
 .progress-text {
   transform: rotate(-45deg);
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .progress-label {
@@ -591,13 +678,13 @@ a:hover {
 }
 
 .gpa-score {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .view-audit {
-  font-size: 13px;
+  font-size: 12.5px;
   margin-top: 8px;
   display: inline-block;
 }
@@ -605,18 +692,20 @@ a:hover {
 /* Sign in / Eagle Link */
 .signin-title {
   font-size: 18px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .signin-desc {
-  font-size: 12px;
+  font-size: 12.5px;
   color: #555;
+  line-height: 1.4;
 }
 
 /* Academic Advisement */
 .advise-text {
   margin-bottom: 16px;
   color: #444;
+  line-height: 1.5;
 }
 
 .advise-main-link {
@@ -640,14 +729,14 @@ a:hover {
 .to-do-content {
   justify-content: center;
   gap: 8px;
-  padding-top: 24px;
+  padding-top: 16px;
+  padding-bottom: 8px;
 }
 
 .todo-icon {
-  font-size: 40px;
-  color: #6db3f2;
-  font-weight: 100;
-  margin-bottom: 8px;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 4px;
 }
 
 .todo-title {
@@ -657,30 +746,35 @@ a:hover {
 
 .todo-sub {
   color: #888;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  font-size: 12px;
 }
 
-/* Tarjetas scrolleables para listas largas (Row 5) */
+/* Tarjetas scrolleables para listas largas */
 .scrollable .card-content {
-  max-height: 250px;
   overflow-y: auto;
 }
 
 .scrollable .card-content::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 
 .scrollable .card-content::-webkit-scrollbar-thumb {
-  background: #ccc;
+  background: #d1d5db;
   border-radius: 4px;
 }
 
 /* ===== RESPONSIVE ====== */
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
 
   .card-grid,
   .card-grid.row3 {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .carousel-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
   }
 }
 

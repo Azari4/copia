@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackboard Classes Detail</title>
+    <style>
+        :root {
+            --gold: #bfa141;
+            /* From screenshot */
+            --blue: #003087;
+            --light-blue: #90caf9;
+            --text-main: #222;
+            --text-gray: #777;
+            --border-gray: #e0e0e0;
+            --bg-gray: #f5f6f8;
+            --success-green: #37b282;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #fff;
+            color: var(--text-main);
+        }
+
+        /* Top Nav Bar */
+        .top-nav {
+            background-color: var(--gold);
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+        }
+
+        .top-nav-left,
+        .top-nav-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .burger-icon,
+        .nav-icon {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .burger-icon svg,
+        .nav-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: #000;
+            stroke-width: 2;
+        }
+
+        .home-text {
+            font-size: 14px;
+            font-weight: 500;
+            color: #000;
+            margin-left: 8px;
+        }
+
+        .user-avatar-nav {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background-color: var(--light-blue);
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        /* Main Container */
+        .detail-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 16px 24px;
+        }
+
+        .bb-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .class-header-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #1a73e8;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .back-link svg {
+            width: 14px;
+            height: 14px;
+            stroke: currentColor;
+        }
+
+        .class-title {
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px solid var(--border-gray);
+            margin-bottom: 20px;
+        }
+
+        /* Body Layout */
+        .detail-body {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 40px;
+        }
+
+        @media (max-width: 900px) {
+            .detail-body {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+
+        /* Left Side Content */
+        .dates-text {
+            font-size: 13px;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+        }
+
+        .instructor-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .instructor-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .instructor-name {
+            font-size: 14px;
+            color: #000;
+        }
+
+        .mail-icon-small {
+            width: 16px;
+            height: 16px;
+            fill: none;
+            stroke: #555;
+            stroke-width: 2;
+        }
+
+        .section-block {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .announcements-empty {
+            font-size: 13px;
+            color: #888;
+            font-style: italic;
+        }
+
+        .assignments-box {
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .assignments-icon {
+            margin-bottom: 12px;
+        }
+
+        .assignments-icon svg {
+            width: 48px;
+            height: 48px;
+            fill: none;
+            stroke: var(--gold);
+            stroke-width: 1.5;
+        }
+
+        .assignments-msg {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .open-lms {
+            font-size: 12px;
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        .open-lms:hover {
+            text-decoration: underline;
+        }
+
+        /* Right Side Grades Content */
+        .grades-panel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+        }
+
+        .grade-widget {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 4px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        /* Simple CSS trick for the partial green border ring */
+        .grade-widget::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            bottom: -4px;
+            left: -4px;
+            border-radius: 50%;
+            border: 4px solid transparent;
+            border-right-color: var(--success-green);
+            border-bottom-color: var(--success-green);
+            transform: rotate(-15deg);
+        }
+
+        .grade-letter-big {
+            font-size: 32px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .grades-summary-block {
+            width: 100%;
+        }
+
+        .grades-block-title {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-align: left;
+        }
+
+        .grades-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #333;
+        }
+
+        .grades-row-value {
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Nav Bar -->
+    <header class="top-nav">
+        <div class="top-nav-left">
+            <div class="burger-icon">
+                <svg viewBox="0 0 24 24">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </div>
+            <span class="home-text">Home</span>
+        </div>
+        <div class="top-nav-right">
+            <div class="nav-icon">
+                <!-- Calendar icon -->
+                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+            </div>
+            <div class="nav-icon">
+                <!-- Bell icon -->
+                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                </svg>
+            </div>
+            <div class="user-avatar-nav">A</div>
+        </div>
+    </header>
+
+    <div class="detail-container">
+        <h1 class="bb-title">Blackboard Classes</h1>
+
+        <div class="class-header-row">
+            <a href="index.html" class="back-link">
+                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                CLASSES
+            </a>
+            <span class="class-title">ENGL 1101 Composition and Rhetoric</span>
+        </div>
+
+        <hr class="divider">
+
+        <div class="detail-body">
+            <!-- Left Content -->
+            <div class="detail-left">
+                <p class="dates-text">Jan 12, 2026 - Mar 7, 2026</p>
+
+                <div class="instructor-row">
+                    <div class="instructor-avatar">C</div>
+                    <span class="instructor-name">Caleb Bouchard</span>
+                    <svg class="mail-icon-small" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </div>
+
+                <div class="section-block">
+                    <h2 class="section-title">Announcements</h2>
+                    <p class="announcements-empty">There are no announcements for this class</p>
+                </div>
+
+                <div class="section-block">
+                    <h2 class="section-title">Assignments</h2>
+                    <div class="assignments-box">
+                        <div class="assignments-icon">
+                            <!-- Folder / Inbox icon -->
+                            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                </path>
+                                <line x1="12" y1="11" x2="12" y2="17"></line>
+                                <line x1="9" y1="14" x2="15" y2="14"></line>
+                            </svg>
+                        </div>
+                        <p class="assignments-msg">No Assignments Found</p>
+                        <a href="#" class="open-lms">Open LMS</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Content (Grades) -->
+            <div class="detail-right">
+                <div class="grades-panel">
+                    <div class="grade-widget">
+                        <span class="grade-letter-big">B</span>
+                    </div>
+
+                    <div class="grades-summary-block">
+                        <h2 class="grades-block-title">Grades</h2>
+                        <div class="grades-row">
+                            <span class="grades-row-label">Final</span>
+                            <span class="grades-row-value">B</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- .detail-body -->
+
+    </div> <!-- .detail-container -->
+
+</body>
+
+</html>

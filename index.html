@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Student Portal – Chattahoochee Technical College</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -46,7 +46,6 @@
 
     <section class="hero-carousel">
       <div class="carousel-container">
-
         <article class="hero-card">
           <p class="hero-card-text">Are we still friends? Review the Quick Contact Info Tune Up card to make sure your
             info is correct.</p>
@@ -68,10 +67,9 @@
           <p class="hero-card-text">Graduating this semester? Secure your spot to walk in the May ceremony!</p>
           <div class="hero-card-footer">
             <span class="hero-counter">3 of 3</span>
-            <a href="#" class="hero-link">Register NOW for Graduation</a>
+            <a href="#" class="hero-link btn-link">Register NOW for Graduation</a>
           </div>
         </article>
-
       </div>
     </section>
   </div>
@@ -86,7 +84,7 @@
       </div>
       <div class="tabs-right">
         <a href="#" class="view-all-link">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
             <circle cx="11" cy="11" r="8" />
             <line x1="21" y1="21" x2="16.65" y2="16.65" />
           </svg>
@@ -102,43 +100,41 @@
       <div class="card">
         <div class="card-header">
           <h2 class="card-title">Quick Contact Info Tune Up</h2>
-          <div class="card-icons">
-            <span class="icon-lock"></span>
-          </div>
+          <div class="card-icons"><span class="icon-lock"></span></div>
         </div>
         <div class="card-content">
-          <p><strong>Have you peeked at your personal contact info lately?</strong></p>
-          <br>
-          <p>If not, it's the perfect moment for a quick check-in!</p>
+          <p class="bold-text">Have you peeked at your personal contact info lately?</p>
+          <p class="mt-12">If not, it's the perfect moment for a quick check-in!</p>
           <ul class="text-list">
             <li>• <a href="#">Give it a look here</a>, and make sure everything is still up to date.</li>
             <li>• If your email or phone number needs a little refresh, <a href="#">just fill out the form</a>.</li>
           </ul>
-          <br>
-          <p>Your future self (and your inbox!) will thank you.</p>
+          <p class="mt-12">Your future self (and your inbox) will thank you.</p>
         </div>
       </div>
 
-      <div class="card">
+      <div class="card scrollable">
         <div class="card-header">
           <div>
             <h2 class="card-title">Blackboard Classes</h2>
             <span class="card-subtitle">Last updated Mar 5, 2026 12:42 PM</span>
           </div>
           <div class="card-icons">
-            <span class="icon-dots"></span>
-            <span class="icon-lock"></span>
+            <span class="icon-dots"></span><span class="icon-lock"></span>
           </div>
         </div>
         <div class="card-content">
           <div class="semester-filter">
             <span>Spring Semester 2026 ∨</span>
-            <span class="icon-refresh">↻</span>
+            <span class="icon-refresh"><svg class="svg-icon" viewBox="0 0 24 24">
+                <path d="M21 2v6h-6" />
+                <path d="M3 12a9 9 0 1 0 2.63-6.37L2 10" />
+              </svg></span>
           </div>
           <div class="class-list">
             <div class="class-item">
               <div class="class-info">
-                <a href="#">ENGL 1101 Composition and Rhetoric</a>
+                <a href="class_detail.html">ENGL 1101 Composition and Rhetoric</a>
                 <span>Jan 12, 2026 - Mar 7, 2026</span>
               </div>
               <div class="grade-circle grade-b">B</div>
@@ -166,11 +162,9 @@
       <div class="card">
         <div class="card-header">
           <h2 class="card-title">Upcoming Dates</h2>
-          <div class="card-icons">
-            <span class="icon-lock"></span>
-          </div>
+          <div class="card-icons"><span class="icon-lock"></span></div>
         </div>
-        <div class="image-placeholder">
+        <div class="image-placeholder full-height">
           <img src="assets/registration_dates.png" alt="Registration Dates" class="card-banner-img" />
         </div>
       </div>
@@ -178,16 +172,14 @@
       <div class="card">
         <div class="card-header">
           <h2 class="card-title">Registration (NEW)</h2>
-          <div class="card-icons">
-            <span class="icon-lock"></span>
-          </div>
+          <div class="card-icons"><span class="icon-lock"></span></div>
         </div>
         <div class="card-content">
-          <span class="card-subtitle">1 of 1</span>
+          <span class="card-subtitle-gray">1 of 1</span>
           <h3 class="semester-title">Spring Semester 2026</h3>
           <span class="semester-dates">Open: Jan 26, 2026 - Apr 22, 2026</span>
           <div class="registered-tag">REGISTERED: 4</div>
-          <button class="btn-outline">VIEW DETAILS</button>
+          <button class="btn-outline mt-12">VIEW DETAILS</button>
           <div class="carousel-dots">
             <span class="arrow">&lt;</span>
             <span class="dot active"></span>
@@ -205,13 +197,32 @@
         </div>
         <div class="card-content">
           <ul class="link-list">
-            <li><span class="list-icon">🔗</span><a href="#">Account Summary (View my Bill)</a></li>
-            <li><span class="list-icon">🔗</span><a href="#">Pay My Bill</a></li>
-            <li><span class="list-icon icon-img">💳</span><a href="#">Ways to Pay</a></li>
-            <li><span class="list-icon">🔗</span><a href="#">Nelnet Payment Plans</a></li>
-            <li><span class="list-icon">🔗</span><a href="#">Statement/Payment History</a></li>
-            <li><span class="list-icon">🔗</span><a href="#">Tax Notification (1098-T)</a></li>
-            <li><span class="list-icon icon-img">💸</span><a href="#">Refunds</a></li>
+            <li><span class="list-icon"><svg class="svg-icon" viewBox="0 0 24 24">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                </svg></span><a href="#">Account Summary (View my Bill)</a></li>
+            <li><span class="list-icon"><svg class="svg-icon" viewBox="0 0 24 24">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                </svg></span><a href="#">Pay My Bill</a></li>
+            <li><span class="list-icon icon-img"><img src="assets/logo.png"
+                  style="width:14px;height:14px;object-fit:contain;" alt="Eagle Logo" /></span><a href="#">Ways to
+                Pay</a></li>
+            <li><span class="list-icon"><svg class="svg-icon" viewBox="0 0 24 24">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                </svg></span><a href="#">Nelnet Payment Plans</a></li>
+            <li><span class="list-icon"><svg class="svg-icon" viewBox="0 0 24 24">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                </svg></span><a href="#">Statement/Payment History</a></li>
+            <li><span class="list-icon"><svg class="svg-icon" viewBox="0 0 24 24">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                </svg></span><a href="#">Tax Notification (1098-T)</a></li>
+            <li><span class="list-icon icon-img"><img src="assets/logo.png"
+                  style="width:14px;height:14px;object-fit:contain;" alt="Eagle Logo" /></span><a href="#">Refunds</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -223,11 +234,24 @@
         </div>
         <div class="card-content">
           <ul class="link-list">
-            <li><span class="list-icon">🔗</span><a href="#">Financial Aid Main Menu</a></li>
-            <li><span class="list-icon">🔗</span><a href="#">My Financial Aid Award</a></li>
-            <li><span class="list-icon">🔗</span><a href="#">My SAP Status</a></li>
-            <li><span class="list-icon icon-img">🛡️</span><a href="#">Veteran Benefits</a></li>
-            <li><span class="list-icon icon-img">📝</span><a href="#">Financial Aid Forms</a></li>
+            <li><span class="list-icon"><svg class="svg-icon" viewBox="0 0 24 24">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                </svg></span><a href="#">Financial Aid Main Menu</a></li>
+            <li><span class="list-icon"><svg class="svg-icon" viewBox="0 0 24 24">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                </svg></span><a href="#">My Financial Aid Award</a></li>
+            <li><span class="list-icon"><svg class="svg-icon" viewBox="0 0 24 24">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                </svg></span><a href="#">My SAP Status</a></li>
+            <li><span class="list-icon icon-img"><img src="assets/logo.png"
+                  style="width:14px;height:14px;object-fit:contain;" alt="Eagle Logo" /></span><a href="#">Veteran
+                Benefits</a></li>
+            <li><span class="list-icon icon-img"><img src="assets/logo.png"
+                  style="width:14px;height:14px;object-fit:contain;" alt="Eagle Logo" /></span><a href="#">Financial Aid
+                Forms</a></li>
           </ul>
         </div>
       </div>
@@ -236,11 +260,10 @@
         <div class="card-header">
           <h2 class="card-title">Emergency Notification Alerts</h2>
           <div class="card-icons">
-            <span class="icon-dots"></span>
-            <span class="icon-bookmark"></span>
+            <span class="icon-dots"></span><span class="icon-bookmark"></span>
           </div>
         </div>
-        <div class="image-placeholder">
+        <div class="image-placeholder full-height">
           <img src="assets/eagle_alert.png" alt="Eagle Alert" class="card-banner-img" />
         </div>
       </div>
@@ -249,8 +272,7 @@
         <div class="card-header">
           <h2 class="card-title">DegreeWorks Current Term Major...</h2>
           <div class="card-icons">
-            <span class="icon-dots"></span>
-            <span class="icon-bookmark"></span>
+            <span class="icon-dots"></span><span class="icon-bookmark"></span>
           </div>
         </div>
         <div class="card-content align-center">
@@ -271,8 +293,7 @@
         <div class="card-header">
           <h2 class="card-title">Eagle Link</h2>
           <div class="card-icons">
-            <span class="icon-dots"></span>
-            <span class="icon-bookmark"></span>
+            <span class="icon-dots"></span><span class="icon-bookmark"></span>
           </div>
         </div>
         <div class="image-placeholder small-placeholder">
@@ -290,8 +311,7 @@
         <div class="card-header">
           <h2 class="card-title">Student Guidebook</h2>
           <div class="card-icons">
-            <span class="icon-dots"></span>
-            <span class="icon-bookmark"></span>
+            <span class="icon-dots"></span><span class="icon-bookmark"></span>
           </div>
         </div>
         <div class="image-placeholder full-height">
@@ -303,8 +323,7 @@
         <div class="card-header">
           <h2 class="card-title">Academic Advisement</h2>
           <div class="card-icons">
-            <span class="icon-dots"></span>
-            <span class="icon-bookmark"></span>
+            <span class="icon-dots"></span><span class="icon-bookmark"></span>
           </div>
         </div>
         <div class="card-content align-center">
@@ -321,16 +340,21 @@
         <div class="card-header">
           <h2 class="card-title">Student Access</h2>
           <div class="card-icons">
-            <span class="icon-dots"></span>
-            <span class="icon-bookmark"></span>
+            <span class="icon-dots"></span><span class="icon-bookmark"></span>
           </div>
         </div>
         <div class="card-content">
           <ul class="link-list">
             <li><span class="app-icon bb">A</span><a href="#">Blackboard</a></li>
-            <li><span class="app-icon mail">✉</span><a href="#">Student Email</a></li>
+            <li><span class="app-icon mail"><svg class="app-svg" viewBox="0 0 24 24">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg></span><a href="#">Student Email</a></li>
             <li><span class="app-icon okta">O</span><a href="#">Okta Dashboard</a></li>
-            <li><span class="list-icon">🔗</span><a href="#">DegreeWorks</a></li>
+            <li><span class="list-icon"><svg class="svg-icon" viewBox="0 0 24 24">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                </svg></span><a href="#">DegreeWorks</a></li>
             <li><span class="app-icon ctc">C</span><a href="#">Help Desk</a></li>
             <li><span class="app-icon ctc">C</span><a href="#">Chatt Tech Homepage</a></li>
           </ul>
@@ -370,13 +394,31 @@
         </div>
         <div class="card-content">
           <ul class="link-list">
-            <li><span class="app-icon lib">📚</span><a href="#">Library</a></li>
-            <li><span class="list-icon">🔗</span><a href="#">Library Guides</a></li>
-            <li><span class="app-icon ans">?</span><a href="#">Library Answers</a></li>
+            <li><span class="app-icon lib"><svg class="app-svg" viewBox="0 0 24 24">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                </svg></span><a href="#">Library</a></li>
+            <li><span class="list-icon"><svg class="svg-icon" viewBox="0 0 24 24">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                </svg></span><a href="#">Library Guides</a></li>
+            <li><span class="app-icon ans"><svg class="app-svg" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                  <line x1="12" y1="17" x2="12.01" y2="17" />
+                </svg></span><a href="#">Library Answers</a></li>
             <li><span class="app-icon ctc">C</span><a href="#">Online Tutoring</a></li>
             <li><span class="app-icon ctc">C</span><a href="#">Success Center</a></li>
-            <li><span class="app-icon ans">?</span><a href="#">Success Center Answers</a></li>
-            <li><span class="app-icon ans">?</span><a href="#">Technology Answers</a></li>
+            <li><span class="app-icon ans"><svg class="app-svg" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                  <line x1="12" y1="17" x2="12.01" y2="17" />
+                </svg></span><a href="#">Success Center Answers</a></li>
+            <li><span class="app-icon ans"><svg class="app-svg" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                  <line x1="12" y1="17" x2="12.01" y2="17" />
+                </svg></span><a href="#">Technology Answers</a></li>
           </ul>
         </div>
       </div>
@@ -392,12 +434,21 @@
           <ul class="link-list">
             <li><span class="app-icon ctc">C</span><a href="#">Program Change Request</a></li>
             <li><span class="app-icon ctc">C</span><a href="#">Order Official Transcript</a></li>
-            <li><span class="list-icon">🔗</span><a href="#">View Final Grades</a></li>
+            <li><span class="list-icon"><svg class="svg-icon" viewBox="0 0 24 24">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                </svg></span><a href="#">View Final Grades</a></li>
             <li><span class="app-icon ctc">C</span><a href="#">Petition for Graduation</a></li>
-            <li><span class="list-icon">🔗</span><a href="#">View Unofficial Transcript</a></li>
+            <li><span class="list-icon"><svg class="svg-icon" viewBox="0 0 24 24">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                </svg></span><a href="#">View Unofficial Transcript</a></li>
             <li><span class="app-icon green">F</span><a href="#">FERPA Request Form</a></li>
             <li><span class="app-icon green">T</span><a href="#">Transcript Re-Evaluation Request</a></li>
-            <li><span class="list-icon">🔗</span><a href="#">Update or Set Emergency Contact</a></li>
+            <li><span class="list-icon"><svg class="svg-icon" viewBox="0 0 24 24">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                </svg></span><a href="#">Update or Set Emergency Contact</a></li>
           </ul>
         </div>
       </div>
@@ -425,10 +476,15 @@
           <div class="card-icons"><span class="icon-dots"></span><span class="icon-bookmark"></span></div>
         </div>
         <div class="card-content align-center to-do-content">
-          <div class="todo-icon">✓</div>
+          <div class="todo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4a90e2" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
           <p class="todo-title">Add your tasks</p>
           <p class="todo-sub">Create personal tasks and reminders.</p>
-          <button class="btn-outline">ADD NEW TASK</button>
+          <button class="btn-outline w-100">ADD NEW TASK</button>
         </div>
       </div>
     </div>
